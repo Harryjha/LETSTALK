@@ -6,8 +6,8 @@ import { Room } from './pages/room/index';
 import { StreamCall} from "@stream-io/video-react-sdk";
 import { useUser } from './user-context';
 function App() {
-const {call} = useUser()
-
+const {call} = useUser() 
+ 
    return (
    <Router>
    <Routes>

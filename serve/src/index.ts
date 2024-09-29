@@ -9,7 +9,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
 app.use("/auth", authRoute);
+app.get("/", (req, res) => {
+    res.send("Welcome to the Express server!");
+  });
+  
 
 
 const PORT = process.env.PORT || 3001;

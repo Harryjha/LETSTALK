@@ -154,6 +154,7 @@ export const MainPage = () => {
                      </> 
                   ): ( <h2>no available room at moment.</h2>
                 )}
+               
         </div>
     </StreamVideo>
     );

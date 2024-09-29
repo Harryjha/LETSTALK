@@ -10,7 +10,7 @@ router.post("/createUser", async (req: Request, res: Response) =>{
         return res.status(400).json({message: "Required field is empty "})
     }
 
-    const newUser: UserObjectRequest ={
+    const newUser: UserObjectRequest ={ 
         id: username,
         role: "user",
         name,
@@ -22,8 +22,8 @@ router.post("/createUser", async (req: Request, res: Response) =>{
         [newUser.id]: newUser,
       },
   });
-  const expiry = Math.floor(Date.now() / 1000) + 24 * 60 * 60;
-  const token = client.createToken(username, expiry);
+  const expiry = Math.floor(Date.now() / 1000) + 24 * 60 * 600; 
+  const token = client.createToken(username, expiry);    
 
   return res.status(200).json({ token, username, name });
 });
